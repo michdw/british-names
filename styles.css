@@ -1,0 +1,121 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  font-size: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.background {
+  opacity: .4;
+  position: fixed;
+  top: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  height: 30%;
+  transform: translateX(-50%);
+}
+
+.welcome, .intro {
+  font-size: 2em;
+  font-family: 'Amatic SC';
+}
+
+.intro span {
+  font-size: 3em;
+}
+
+.intro:hover, .name:hover {
+  cursor: pointer;
+}
+
+.name {
+  font-size: 5em;
+  padding: 30px;
+  padding-bottom: 0;
+  opacity: .7;
+  font-family: 'MedievalSharp';
+  user-select: none;
+}
+
+.info {
+  position: absolute;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info p {
+  margin-right: 30px;
+  font-family: sans-serif;
+  line-height: 1.5em;
+}
+
+.info a {
+  color: #000;
+  font-weight: bold;
+}
+
+.expand, .exit {
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10px;
+}
+
+.expand:hover, .exit:hover {
+  cursor: pointer;
+}
+
+.expand {
+  font-family: courier;
+}
+
+.exit {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: .4;
+}
+
+.exit:hover {
+  opacity: .7;
+}
+
+.closedInfo {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  opacity: .4;
+}
+
+.openedInfo {
+  width: 20%;
+  background: rgba(255, 255, 255, .4);
+}
+
+.fullInfo {
+  display: none;
+}
