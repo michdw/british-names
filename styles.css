@@ -92,9 +92,9 @@ body {
 }
 
 .exit {
-  font-family: sans-serif;
+  font-family: 'sans serif';
   position: absolute;
-  top: 0;
+  top: -.4em;
   right: 0;
   opacity: .4;
 }
@@ -109,6 +109,10 @@ body {
   width: 0;
   height: 0;
   opacity: .4;
+}
+
+.closedInfo:hover {
+  opacity: .55;
 }
 
 .openedInfo {
