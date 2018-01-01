@@ -15,7 +15,7 @@ $(document).ready(function() {
   // assemble names
   $('.name').css('display', 'none');
 
-  $('.intro, .name').on('click', function() {
+  $('.content').on('click', function() {
     $('.name').css('display', 'block');
     $('.intro').text("Click to go somewhere else.");
 
