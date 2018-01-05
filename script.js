@@ -20,8 +20,8 @@ $(document).ready(function() {
     $('.intro').text("Click to go somewhere else.");
 
     var prefx = ['Aber', 'Ash', 'Ast', 'Avon', 'Axe', 'Bally', 'Beck', 'Bex', 'Bir', 'Brad', 'Caer', 'Cul', 'Drum', 'Dun', 'Foss', 'Folk', 'Inver', 'Kil', 'Kirk', 'Lang', 'Lin', 'Liver', 'Lon', 'Moss', 'Nor', 'Ruther', 'Shep', 'Sud', 'Tilly', 'Tre', 'Win'];
-    var root = ['', '', 'bourne', 'den', 'don', 'firth', 'gill', 'ford', 'gate', 'holm', 'ing', 'king', 'leigh', 'ley', 'lin', 'mere', 'more', 'ock', 'stow', 'wold', 'wood', 'ton', '', ''];
-    var sufx = ['', '', 'barrow', 'berry', 'burgh', 'borough', 'bury', 'by', 'caster', 'castle', 'cester', 'chapel', 'dale', 'field', 'ham', 'minster', 'mouth', 'ness', 'pool', 'shire', 'sted', 'ster', 'ton', 'town', 'wall', 'wick', 'worth', ' Abbey', ' Castle', ' Downs', ' Glen', ' Green', ' Hay', ' Prior', ' Village', '-on-the-Water', '', ''];
+    var root = ['', '', 'bourne', 'by', 'den', 'don', 'firth', 'gill', 'ford', 'gate', 'holm', 'ing', 'king', 'leigh', 'ley', 'lin', 'mere', 'more', 'ock', 'ster', 'stow', 'wold', 'wood', 'ton', '', ''];
+    var sufx = ['', '', '', 'barrow', 'berry', 'burgh', 'borough', 'bury', 'by', 'caster', 'castle', 'cester', 'chapel', 'dale', 'field', 'ham', 'minster', 'mouth', 'ness', 'pool', 'shire', 'sted', 'ster', 'ton', 'town', 'wall', 'wick', 'worth', ' Abbey', ' Castle', ' Downs', ' Glen', ' Green', ' Hay', ' Prior', ' Village', '-on-the-Water', '', '', ''];
 
     var a = ~~(Math.random() * prefx.length);
     var b = ~~(Math.random() * root.length);
@@ -29,14 +29,18 @@ $(document).ready(function() {
 
     var fullName = prefx[a] + root[b] + sufx[c];
 
-    // weed out overly long or short names, etc
+    // weed out unrealistic names
     if (root[b] === '' && sufx[c] === '')
       $('.name').click();
     else if (root[b] === '' && sufx[c].charAt(0) === ' ')
       $('.name').click();
-    else if (root[b] === 'ton' && sufx[c] === 'town')
-      $('.name').click();
     else if (prefx[a] === 'Lin' && root[b] === 'lin')
+      $('.name').click();
+    else if (root[b] === 'ton' && sufx[c] === 'ton')
+      $('.name').click();
+    else if (root[b] === 'by' && sufx[c] === 'by')
+      $('.name').click();
+    else if (root[b] === 'ster' && sufx[c] === 'ster')
       $('.name').click();
     else if (fullName.length > 12 && fullName.indexOf(' ') === -1)
       $('.name').click();
