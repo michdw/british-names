@@ -19,22 +19,22 @@ $(document).ready(function() {
     $('.name').css('display', 'block');
     $('.intro').text("Click to go somewhere else.");
 
-    var prefx = ['Aber', 'Ash', 'Ast', 'Avon', 'Bally', 'Beck', 'Bex', 'Bir', 'Brad', 'Cul', 'Drum', 'Dun', 'Foss', 'Folk', 'Inver', 'Kil', 'Kirk', 'Lang', 'Lin', 'Liver', 'Lon', 'Nor', 'Shep', 'Sud', 'Tre', 'Win'];
+    var prefx = ['Aber', 'Ash', 'Ast', 'Avon', 'Axe', 'Bally', 'Beck', 'Bex', 'Bir', 'Brad', 'Cul', 'Drum', 'Dun', 'Foss', 'Folk', 'Inver', 'Kil', 'Kirk', 'Lang', 'Lin', 'Liver', 'Lon', 'Nor', 'Shep', 'Sud', 'Tre', 'Win'];
     var root = ['', '', 'bourne', 'den', 'don', 'firth', 'ford', 'gate', 'holm', 'ing', 'king', 'leigh', 'ley', 'mere', 'more', 'ock', 'stow', 'wold', 'wood', 'ton', '', ''];
     var sufx = ['', '', 'berry', 'borough', 'bury', 'by', 'caster', 'castle', 'cester', 'chapel', 'dale', 'field', 'ham', 'minster', 'mouth', 'ness', 'pool', 'shire', 'sted', 'ster', 'ton', 'town', 'wall', 'wick', 'worth', ' Abbey', ' Castle', ' Downs', ' Glen', ' Green', ' Prior', ' Village', '-on-the-Water', '', ''];
 
-    var i = ~~(Math.random() * prefx.length);
-    var j = ~~(Math.random() * root.length);
-    var k = ~~(Math.random() * sufx.length);
+    var a = ~~(Math.random() * prefx.length);
+    var b = ~~(Math.random() * root.length);
+    var c = ~~(Math.random() * sufx.length);
 
-    var fullName = prefx[i] + root[j] + sufx[k];
+    var fullName = prefx[a] + root[b] + sufx[c];
 
     // weed out overly long or short names, etc
-    if (root[j] === '' && sufx[k] === '')
+    if (root[b] === '' && sufx[c] === '')
       $('.name').click();
-    else if (root[j] === 'ton' && sufx[k] === 'town')
+    else if (root[b] === '' && sufx[c].charAt(0) === ' ')
       $('.name').click();
-    else if (root[j] === '' && sufx[k].charAt(0) === ' ')
+    else if (root[b] === 'ton' && sufx[c] === 'town')
       $('.name').click();
     else if (fullName.length > 12 && fullName.indexOf(' ') === -1)
       $('.name').click();
