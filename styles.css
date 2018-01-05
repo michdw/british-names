@@ -67,7 +67,7 @@ body {
   font-size: 5em;
   padding: 30px;
   padding-bottom: 0;
-  opacity: .7;
+  /*opacity: .7;*/
   font-family: 'MedievalSharp';
   -webkit-user-select: none;
   -moz-user-select: none;
