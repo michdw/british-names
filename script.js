@@ -19,7 +19,7 @@ $(document).ready(function() {
     $('.name').css('display', 'block');
     $('.intro').text("Click to go somewhere else.");
 
-    var prefx = ['Aber', 'Ash', 'Ast', 'Avon', 'Axe', 'Bally', 'Beck', 'Bex', 'Bir', 'Brad', 'Caer', 'Cul', 'Drum', 'Dun', 'Foss', 'Folk', 'Inver', 'Kil', 'Kirk', 'Lang', 'Lin', 'Liver', 'Lon', 'Moss', 'Nor', 'Ruther', 'Shep', 'Sud', 'Tilly', 'Tre', 'Win'];
+    var prefx = ['Aber', 'Ash', 'Ast', 'Avon', 'Axe', 'Bally', 'Beck', 'Bex', 'Bir', 'Brad', 'Caer', 'Cul', 'Drum', 'Dun', 'Foss', 'Folk', 'Inver', 'Kil', 'Kirk', 'Lang', 'Lin', 'Liver', 'Lon', 'Nor', 'Ruther', 'Shep', 'Sud', 'Tilly', 'Tre', 'Win'];
     var root = ['', '', 'bourne', 'by', 'den', 'don', 'firth', 'gill', 'ford', 'gate', 'holm', 'ing', 'king', 'leigh', 'ley', 'lin', 'mere', 'more', 'ock', 'ster', 'stow', 'wold', 'wood', 'ton', '', ''];
     var sufx = ['', '', '', 'barrow', 'berry', 'burgh', 'borough', 'bury', 'by', 'caster', 'castle', 'cester', 'chapel', 'dale', 'field', 'ham', 'minster', 'mouth', 'ness', 'pool', 'shire', 'sted', 'ster', 'ton', 'town', 'wall', 'wick', 'worth', ' Abbey', ' Castle', ' Downs', ' Glen', ' Green', ' Hay', ' Prior', ' Village', '-on-the-Water', '', '', ''];
 
