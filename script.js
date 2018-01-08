@@ -1,5 +1,9 @@
+// wait for fonts to load before displaying text
+$('.content').hide();
+
 $(document).ready(function() {
 
+  $('.content').fadeIn(100);
   // expand and close info
   $('.expand').on('click', function() {
     $('.info').removeClass('closedInfo').addClass('openedInfo');

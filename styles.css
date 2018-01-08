@@ -1,3 +1,5 @@
+/*@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Comfortaa|MedievalSharp');*/
+
 html, body {
   padding: 0;
   margin: 0;
@@ -52,7 +54,6 @@ body {
 
 .intro span {
   font-size: 2em;
-  font-family: 'MedievalSharp'
 }
 
 .content {
