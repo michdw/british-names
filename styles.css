@@ -1,0 +1,152 @@
+/*@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Comfortaa|MedievalSharp');*/
+
+html, body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html {
+  font-size: 1em;
+}
+
+body {
+  font-size: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.background {
+  opacity: .25;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.content {
+  text-align: center;
+}
+
+.welcome, .intro {
+  font-size: 2em;
+  font-family: 'Amatic SC';
+}
+
+.intro {
+  margin-top: 1em;
+}
+
+.intro span {
+  font-size: 2em;
+}
+
+.content {
+  z-index: 99;
+}
+
+.content:hover {
+  cursor: pointer;
+}
+
+.name {
+  font-size: 5em;
+  padding: 30px;
+  padding-bottom: 0;
+  font-family: 'MedievalSharp';
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.info p {
+  margin-right: 30px;
+  font-family: sans-serif;
+  line-height: 1.5em;
+}
+
+.info a {
+  color: #000;
+  font-weight: bold;
+}
+
+.expand, .exit {
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10px;
+}
+
+.expand:hover, .exit:hover {
+  cursor: pointer;
+}
+
+.expand {
+  font-family: courier;
+}
+
+.exit {
+  font-family: 'Comfortaa';
+  position: absolute;
+  top: -.3em;
+  right: 0;
+  opacity: .4;
+}
+
+.exit:hover {
+  opacity: .7;
+}
+
+.closedInfo {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  opacity: .4;
+}
+
+.closedInfo:hover {
+  opacity: .55;
+}
+
+.openedInfo {
+  width: 33%;
+  background: rgba(255, 255, 255, .4);
+  border: 1px solid #ccc;
+}
+
+.fullInfo {
+  display: none;
+}
