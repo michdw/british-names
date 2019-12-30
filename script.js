@@ -1,16 +1,16 @@
 // wait for fonts to load before displaying text
 $('.content').hide();
 
-$(document).ready(function() {
+$(document).ready(function () {
 
   $('.content').fadeIn(100);
   // expand and close info
-  $('.expand').on('click', function() {
+  $('.expand').on('click', function () {
     $('.info').removeClass('closedInfo').addClass('openedInfo');
     $('.fullInfo, .exit').show();
     $('.expand').hide();
   });
-  $('.exit').on('click', function() {
+  $('.exit').on('click', function () {
     $('.info').removeClass('openedInfo').addClass('closedInfo');
     $('.fullInfo').hide();
     $('.expand').show();
@@ -19,7 +19,7 @@ $(document).ready(function() {
   // assemble names
   $('.name').css('display', 'none');
 
-  $('.content').on('click', function() {
+  $('.content').on('click', function () {
     $('.name').css('display', 'block');
     $('.intro').text("Click to go somewhere else.");
 
@@ -35,20 +35,17 @@ $(document).ready(function() {
     var fullName = prefx[a] + midx[b] + sufx[c];
 
     // weed out unrealistic names
-    if (midx[b] === '' && sufx[c] === '')
-      $('.name').click();
-    else if (midx[b] === '' && sufx[c].charAt(0) === ' ')
-      $('.name').click();
-    else if (prefx[a] === 'Lin' && midx[b] === 'lin')
-      $('.name').click();
-    else if (midx[b] === sufx[c])
-      $('.name').click();
-    else if (fullName.length > 12 && fullName.indexOf(' ') === -1)
+    if (midx[b] === '' && sufx[c] === '' ||
+      midx[b] === '' && sufx[c].charAt(0) === ' ' ||
+      prefx[a] === midx[b].ToUpperCase ||
+      prefx[a] === sufx[c] ||
+      midx[b] === sufx[c] ||
+      fullName.length > 12 && fullName.indexOf(' ') === -1)
       $('.name').click();
     else {
       for (var i = 0; i < fullName.length - 2; i++) {
         if (fullName[i] === fullName[i + 1] && fullName[i] === fullName[i + 2])
-        $('.name').click();
+          $('.name').click();
         // display name
         else
           $('.name').html(fullName);
