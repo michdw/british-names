@@ -20,8 +20,9 @@ $(document).ready(function () {
   $('.name').css('display', 'none');
 
   $('.content').on('click', function () {
+    $('.instructions').hide();
     $('.name').css('display', 'block');
-    $('.intro').text("Click to go somewhere else.");
+    $('.intro').text("Click to go somewhere else").css('font-size', '2em');
 
     var prefx = ['Aber', 'Ash', 'Ast', 'Avon', 'Axe', 'Bally', 'Beck', 'Bex', 'Bir', 'Brad', 'Caer', 'Cul', 'Drum', 'Dun', 'Foss', 'Folk', 'Inver', 'Kil', 'Kirk', 'Lang', 'Lin', 'Liver', 'Lon', 'Nor', 'Ruther', 'Shep', 'Sud', 'Tilly', 'Tre', 'Win'];
     var midx = ['', '', 'bourne', 'by', 'den', 'don', 'firth', 'gill', 'ford', 'gate', 'holm', 'ing', 'king', 'leigh', 'ley', 'lin', 'mere', 'more', 'ock', 'ster', 'stow', 'wold', 'wood', 'ton', '', ''];
